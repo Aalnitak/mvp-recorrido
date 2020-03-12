@@ -1,0 +1,565 @@
+* {
+    margin:0;
+    padding:0;
+scrollbar-width: none;
+    }
+    html,
+    body {
+    height:100%;
+    min-height:100%;
+    font-family: 'adobe-garamond-pro';
+    letter-spacing: 0.1em;
+    }
+    .container{
+        height: 100vh;
+        width: 7313px;
+        margin:0;
+    padding:0;
+ 
+    }
+   
+    .container img{
+        height: 100vh;
+    }
+    .imagen{
+        position: absolute;
+        top:0;
+        left:0;
+    }
+    .pes0{
+        z-index: 30;
+    }
+    .pes05{
+        z-index: 27;
+    }
+    .pes1{
+        z-index: 25;
+    }
+    .pes2{
+        z-index: 20;
+    }
+    .pes3{
+        z-index: 15;
+    }
+    .pes4{
+        z-index: 10;
+    }
+    .pes5{
+        z-index: 5;
+    }
+    .pes6{
+        z-index: 0;
+    }
+    .ele{
+        position: absolute;
+        display: block;            
+        font-size: 20px;
+        color:white;
+        background: #000000e6;
+        padding: 20px;
+        width: 630px;
+    }
+    .ele.vid{
+        width: 600px;
+        height: 350px;
+    }
+    .ele p{
+        color: white;
+    }
+    .iconSwitch{
+        width: 20px;
+        height: auto !important;
+        cursor: pointer;
+        position: fixed;
+        display: block;
+    }
+    .mdl-inicio {
+        padding: 27vh 20vw;
+        text-align: center;
+        color: white;
+    }
+    .mdl-inicio h2 {
+        font-size: 48px;
+    }
+    .mdl-inicio p {
+        font-size: 28px;
+        margin-top: 70px;
+        color: #858585;
+    }
+    #au{
+        top: 40px;
+        right: 80px;
+        cursor: pointer;
+    }
+    #dyn{
+        top: 40px;
+        right: 130px;
+        cursor: pointer;
+    }
+    .vid:focus{
+    outline: none;
+    }
+    #logo100 {
+        position: fixed;
+        width: 320px;
+        height: auto;
+       
+        top: 28px;
+        left: calc(50vw - 160px);
+    }
+    #log{
+        position: fixed;
+        display: block;
+        top: 30px;
+        left: 10px;
+        width: 40px;
+        height: 40px;
+        background-color: #ffffffbf;
+        padding: 3px;
+        font-size: 20px;
+        color: black;
+    }
+    .hidden{
+        display:none;
+    }
+    #uno{
+        top: 400px;
+        left: 600px;
+        opacity: 0;
+    }
+    #dos{
+        top: 300px;
+        left: 2000px;
+        opacity: 0;
+    }
+    #tres{
+        top: 300px;
+        left: 3000px;
+        opacity: 0;
+    }
+    #cuatro{
+        top: 200px;
+        left: 4000px;
+        opacity: 0;
+    }
+    #head{
+        position: fixed;
+        height: 100px;
+        background-color: white;
+        opacity: 0.5;
+        
+        width: 100%;
+    }
+    #logo{
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        width: auto;
+        height: 70px;
+        padding: 10px;
+       
+    }
+    .navbar.navbar-dark{
+        position: fixed !important;
+        
+        top: 30px;
+        right: 18px;
+        padding: 0;
+    }
+    #menuNav{
+        width: 102%;
+        position: fixed;
+        
+    }
+    .iconContainer {
+        height: 61vh;
+        width: 4vh;
+        position: absolute;
+        top: 29vh;
+        left: 40.5vh;
+        cursor: pointer;
+        background-color: transparent;
+    }
+    #farol0 {
+        position: absolute;
+        left: 36.2vh;
+        height: 67vh;
+        top: 24vh;
+        cursor: pointer;
+    }
+    #faroldiv{
+        position: absolute;
+        
+        width: 190px;
+        text-align: justify;
+        top: 410px;
+        left: 168px;
+    }
+    .leerMas{
+        text-align: right;
+        font-size: 15px !important;
+    }
+    .farolTxt{
+        color:white;
+    }
+    h4.farolTxt{
+        font-size: 18px !important;
+    }
+    #menu-list{
+        text-align: center;
+        list-style: none;
+        padding: 0 10%;
+    }
+    #menu-list li{
+        font-size: 25px;
+        color: white;
+        text-shadow: 1px 1px 2px black;
+        margin: 0;
+        padding: 10px 0;
+    }
+    .titu-li{
+        text-transform: uppercase;
+        font-size: 43px !important;
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+        color:black !important;
+        text-shadow: none !important;
+    }
+    .menu-fondo{
+        background-image: url("../img/textura.png");
+    }
+    #video1{
+        z-index: -1;
+    }
+    #videoBTN {
+        height: 100px;
+        width: auto;
+        position: absolute;
+        top: 83vh;
+        left: 358vh;
+        cursor: pointer;
+    }
+    #doorBTN {
+        height: 100px;
+        width: auto;
+        position: absolute;
+        top: 81vh;
+        left: 245vh;
+        cursor: pointer;
+        filter: invert(20%);
+    }
+    .videoCont{
+        /* width - height igual que el video al interior */
+        width: 75vw; 
+        margin: 0 auto;
+    }
+    .video-text {
+        position: fixed;
+        background-color: brown;
+        height: 100px;
+        width: 140px;
+        top: 0;
+        left: 210px;
+        color: white;
+        cursor: pointer;
+    }
+    .video-text {
+        position: fixed;
+        background-color: brown;
+        height: 100px;
+        width: 140px;
+        top: 0;
+        left: 210px;
+        color: white;
+    }
+    .txtoggle {
+        display: inline-flex;
+        height: inherit;
+        align-items: end;
+        padding-bottom: 11px;
+    }
+    .txtoggle img {
+        height: 20px;
+        margin: 0 20px;
+    }
+    .txtoggle p {
+   
+        margin: 0;
+    }
+    .txtshown{
+        cursor: pointer;
+    }
+    .zoom-text {
+        background-color: white;
+        padding: 20px;
+        bottom: 10vh;
+        position: absolute;
+        width: 50vh;
+        left: 10vh;
+    }
+    .zoom1-fondo {
+        background-image: url("../img/estacion-dentro.jpg");
+        width: 101vw;
+        height: 100%;
+        background-size: cover;
+        position: fixed;
+        background-position: bottom;
+    }
+    .btn-zoom-pba1 {
+        height: 80px !important;
+        position: absolute;
+        left: 92vh;
+        top: 53vh;
+        animation: scalevideoIN 1s linear infinite alternate;
+        cursor: pointer;
+    }
+    .cine-fondo{
+        background-image: url("../img/video-fondo.png");
+        width: 101vw;
+        height: 100%;
+        background-size: cover;
+        position: fixed;
+    }
+    .cine-fondo video{
+        width: 75vw;
+        position: fixed;
+        top: 20px;
+    }
+    .fondo{
+        width: 100%;
+        height: 100vh;
+        padding: 7% 0;
+        background-size: cover;
+    }
+    .botoncerrar {
+        filter: invert(90%);
+        height: 20px !important;
+        position: fixed;
+        right: 20px;
+        top: 10px;
+    }
+    .modal-backdrop {
+        background-color: red;
+     }
+    img.close {
+        width: 27px;
+        height: auto !important;
+        padding: 5px;
+    }
+    .navbar-toggler>.close {
+        display:inline;
+        font-family: sans-serif;
+    }
+    .navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
+        display:none;
+    }
+    .navbar-dark .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,0,0)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    .modal-backdrop {
+        background-color: white;
+        opacity: 0.9 !important;;
+    }
+    .no-border{
+        border:none;
+    }
+    .modal-inicio{
+        background-image: url("../img/marco-lightbox.png");
+        background-size: cover;
+        height: 94vh;
+        width: 100vw;
+        max-width: unset;
+        background-color: transparent;
+        border: none;
+    }
+    .modal-cont{
+        height: 90vh;
+        width: 90vw;
+        max-width: unset;
+        margin: 10px auto;
+    }
+    #doTrolley {
+        position: absolute;
+        height: 60px;
+        left: 180vh;
+        top: 82vh;
+        animation: scalevideoIN 1s linear infinite alternate;
+        cursor: pointer;
+    }
+    #dotFarol0 {
+        position: absolute;
+        height: 5vh;
+        left: 36.5vh;
+        top: 37vh;
+        animation: scalevideoIN 1s linear infinite alternate;
+        cursor: pointer;
+    }
+    /* pano */
+
+    #pano-container{
+        width: 300px;
+        height: 300px;
+        display: none;
+    }
+    .open{
+        display: block !important;
+        position: fixed;
+    }
+
+
+    #panorama-container {
+        position: fixed;
+        display: flex !important;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background: rgba(0,0,0,1);
+        transform: scale(0,0);
+        opacity: 0;
+        -webkit-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+    }
+
+    #panorama-container.open {
+        opacity: 1;
+        transform: scale(1,1);
+    }
+    .close {
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        right: 0;
+        margin: 20px;
+        cursor: pointer;
+    }
+
+    .close > i {
+        color: #fff;
+        font-size: 44px;
+    }
+
+    #main-container {
+        width: 100%;
+        height: 80%;
+        align-self: center;
+        background-color: #000;
+    }
+    #desc-container {
+        height: 70%;
+        width: 70%;
+        background: #fff;
+        color: #000;
+        border-radius: 3px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      #desc-container > iframe {
+        border: none;
+        width:100%;
+        height: 50%;
+      }
+
+      .title {
+        font-size: 1.5em;
+        text-align: center;
+        padding: 5px;
+      }
+
+      .text {
+        padding: 0 20px 20px 20px;
+      }
+
+      /* medias */
+
+
+    @media(max-width:766px) {
+        html,
+        body {
+        height:100%;
+        width: 100%;
+        min-height: unset;
+        overflow-y: hidden;
+        overflow-x: scroll !important;
+        }
+        .imagen{
+            height: 100vh;
+            width: auto;
+        }
+        #uno, #dos, #tres, #cuatro{
+            position: fixed;
+            width: 85%;
+            font-size: 14px;
+            bottom: 60px;
+            left: 8%;
+            top:unset;
+            opacity: 0;
+            animation: unset;
+        }
+    }
+    @keyframes fadeEffect { /* from 0 to full opacity */
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+    @keyframes fadeOut { /* from 0 to full opacity */
+        from {opacity: 1;}
+        to {opacity: 0;}
+    }
+    @keyframes fadeToInvertSVG{
+        from {filter: invert(0%);}
+        to {filter: invert(90%);}
+    }
+    @keyframes fadeToNormalSVG{
+        from {filter: invert(90%);}
+        to {filter: invert(0%);}
+    }
+    @keyframes movimientoIzq{
+        from {
+            transform: translateX(0px);
+        }
+        to{
+            transform: translateX(-800px);
+        }
+    }
+    @keyframes scalevideoOUT{
+        from{
+            scale: 0.1;
+        }
+        to{
+            scale:1;
+        }
+    }
+    @keyframes scalevideoIN{
+        from{
+            scale: 1;
+        }
+        to{
+            scale:0.1;
+        }
+    }
+    @keyframes videoTxtExpand{
+        from{
+            height: 100px;
+            width: 140px;
+            padding: 0;
+        }
+        to{
+            height: 250px;
+            width: 390px;
+            padding: 55px 40px 5px 40px;
+        }
+    }
+    @keyframes videoTxtShrink{
+        from{
+            height: 250px;
+            width: 390px;
+            padding: 55px 40px 5px 40px;
+            
+        }
+        to{
+            
+            height: 100px;
+            width: 140px;
+            padding: 0;
+        }
+    }

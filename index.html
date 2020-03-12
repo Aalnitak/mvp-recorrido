@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Enel Histórico</title>
+    <link rel="stylesheet" href="css/el.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/asu4roz.css">
+
+    </head>
+  <body>
+
+    <!-- assets -->
+      <audio id="audiomaq">
+        <source src="audio/sonidomaq.wav" type="audio/wav">
+      </audio>
+      <audio id="audiofondo">
+        <source src="audio/piano1.mp3" type="audio/mpeg">
+      </audio>
+      
+      <!-- container  -->
+    <div  class="container">
+        <div  class="row">
+          <nav id="boton-nav" class="navbar navbar-dark pes0">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation" onclick="cambioLogo()">
+              <img src="svg/cross.svg" alt="cerrar" class="close">
+              <span class="navbar-toggler-icon"></span>
+              
+
+            </button>
+          </nav>
+          <div class="collapse pes1" id="menuNav">
+            <div  class="menu-fondo fondo">
+              <ul id="menu-list">
+                <li class="titu-li">la re-evoluz-cien que cambió nuestras vidas</li>
+                <li>. La revolución de la luz .</li>
+                <li>. La revolución de los tranvías eléctricos .</li>
+                <li>. La revolución de los avisos luminosos .</li>
+                <li>. La revolución de los medios masivos audiovisuales .</li>
+                <li>. La revolución del Metro .</li>
+                <li>. La revolución de los computadores .</li>
+                <li>. La revolución de internet .</li>
+                <li>. La revolución de la electromovilidad .</li>
+                <li>. La revolución de la permanente innovación tecnológica .</li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div id="cine1" class="cine-fondo pes0" style="display: none; scale:0">
+            <div  id="cerrarcine">
+              <img class="botoncerrar" src="svg/cross.svg" alt="cerrar" onclick="toggleCine1('none')">
+            </div>
+            <div  class="videoCont">
+              <div id="video1txt" class="video-text" onclick="toggleVidTxt();">
+                <div id="vidToggleTxt" class="txtoggle" >
+                  <img src="svg/sun.svg" alt="algun svg">
+                  <p>Leer</p>
+                </div>
+                <div id="videoTxtShown" class="txtshown" style="display: none;">
+                  <p>Entre 1910 y 1930 se produjo un crecimiento explosivo de la construcción líneas de tranvías, pasando de 145 kilómetros de rieles a más de 450, convirtiéndose en las verdaderas venas y arterias de una metrópolis en expansión permanente.</p>
+                </div>
+              </div>
+              <video id="video1" controls autoplay>
+                <!-- <source src="PRUEBA DE CONCEPTO_1.mp4"
+                        type="video/webm"> -->
+                <source src="video/PRUEBA DE CONCEPTO_1.mp4"
+                        type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+            </div>
+
+          </div>
+
+          <!-- prueba zoom -->
+          <div id="zoom1" class="zoom1-fondo pes0" style="display: none; opacity:0">
+            <div  id="cerrarcine">
+              <img class="botoncerrar" src="svg/cross.svg" alt="cerrar" onclick="toggleZoom1('none')">
+            </div>
+            <div  class="videoCont">
+              <div  class="zoom-text">
+                <div class="txtoggle" >
+                  <p>Entre 1910 y 1930 se produjo un crecimiento explosivo de la construcción líneas de tranvías, pasando de 145 kilómetros de rieles a más de 450, convirtiéndose en las verdaderas venas y arterias de una metrópolis en expansión permanente.</p>
+                </div>
+                
+              </div>
+              
+            </div>
+            <img class="btn-zoom-pba1" src="svg/sun.svg" alt="algun svg" onclick="togglePano1();">
+          </div>
+
+
+            <div id="ro" class="col-md-12">
+              <div class="pes3" id="head"></div>
+              <!-- <p id="log" class="pes1" ></p> -->
+                <img onclick="fondoplay();" class="iconSwitch pes2" id="au" src="svg/mudo.svg" alt="altavoz">
+                <img onclick="diaNoche();" class="iconSwitch pes2" id="dyn" src="svg/sun.svg" alt="switch dia y noche">
+                <img class="pes05" id="logo" src="img/logo-color.png" alt="logo">
+                <img class="pes2" id="logo100" src="svg/logo-100.svg" alt="logo">
+                <img class="pes2" id="videoBTN" src="svg/BTN-video.svg" alt="logo" onclick="toggleCine1('block');">
+                <img class="pes2" id="doorBTN" src="svg/door.svg" alt="logo" onclick="toggleZoom1('block');">
+                
+                <img src="svg/dot.svg" class="pes3" alt="dot" id="doTrolley" style="display: none;" onclick="toggleTranvia();">
+                <img src="svg/dot.svg" class="pes3" alt="dot" id="dotFarol0" onclick="toggleFarol0();">
+                <img src="gif/FAROL-02.gif" class="pes4" id="farol0" alt="farol0" >
+                
+                
+                <!-- <div class="pes2" id="faroldiv">
+                  <h2 class="farolTxt">Farol</h2>
+                  <h4 class="farolTxt">Salir de las sombras.</h4>
+                  <p class="farolTxt leerMas">Leer más ></p>
+                </div>
+                <div class="iconContainer pes3">
+                  <img src="img/farol.png" alt="farol" id="farol">
+                </div> -->
+                
+                <img id="trolley" src="img/tranvia.png" alt="trolley" class="imagen pes4">
+                <img class="imagen pes6" id="dia" src="img/TELA-dia.jpg" alt="Santiago histórico de día">
+                <img class="imagen pes6" id="noche" src="img/TELA-noche.jpg" style="opacity:0;" alt="Santiago histórico de noche">
+                
+                
+                <!-- pano container -->
+                <div id="pano-container0" class="pes0"></div>
+                <div id="desc-container" style="display:none">
+                  <iframe src="https://www.youtube.com/embed/ZcCY6FLP7iQ"></iframe>
+                  <div class="title">El Tren y la Electricidad</div>
+                  <div class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet ducimus at expedita, tenetur, tempora totam a dolorem sed quo adipisci tempore dolorum fuga consectetur repellat quibusdam magni iste, impedit quidem.</div>
+                </div>
+
+                <div id="panorama-container" class="pes0">
+                <!-- Close button -->
+                  <div class="close">
+                    <i class="material-icons">x</i>
+                  </div>
+                  <!-- Main container -->
+                  <div id="main-container">
+                    
+                  </div>
+                </div>
+
+
+                <!-- modales -->
+
+
+                <!-- Button trigger modal -->
+                
+
+                <!-- Modal inicio -->
+                <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalTitle"  aria-modal="true">
+                  <div class="modal-dialog modal-dialog-centered modal-cont" role="document" >
+                    <div class="modal-content modal-inicio">
+                      
+                      <div class="modal-body no-border mdl-inicio" >
+                        <h2>Re/evoLUZ100</h2>
+                        <p>Te invitamos a recorrer las calles de 100 años de una historia electrizante, de cómo la energía iluminó para siempre nuestras vidas, cambiando la forma de transportarnos, de comunicarnos, de conectarnos.</p>
+
+                      </div>
+                      <div class="modal-footer no-border" >
+                        
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Modal tranvia -->
+                <div class="modal fade" id="tranviaModal" tabindex="-1" role="dialog" aria-labelledby="tranviaModalTitle"  aria-modal="true">
+                  <div class="modal-dialog modal-dialog-centered modal-cont" role="document" >
+                    <div class="modal-content modal-inicio">
+                      
+                      <div class="modal-body no-border mdl-inicio" >
+                        <h2>LOS TRANVÍAS</h2>
+                        <p>Hacia 1920, los carros eléctricos recorrían buena parte de la ciudad, ubicada en el anillo formado por lo que hoy es Costandera Andrés Bello por el norte, Tobalaba por el Oriente, San Diego por el Sur y Yungay por el Poniente. Una treintena de recorridos con medio millar de vehículos cubrían los más de 155 millones de pasajeros al año.</p>
+                      </div>
+                      <div class="modal-footer no-border" >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <!-- Modal farol0 -->
+                <div class="modal fade" id="farolModal" tabindex="-1" role="dialog" aria-labelledby="farolModalTitle"  aria-modal="true">
+                  <div class="modal-dialog modal-dialog-centered modal-cont" role="document" >
+                    <div class="modal-content modal-inicio">
+                      
+                      <div class="modal-body no-border mdl-inicio" >
+                        <h2>FAROL</h2>
+                        <p>Los primeros dos faroles que comenzaron a sacar de las sombras a Santiago, fueron instalados en 1883 en plena Plaza de Armas.  Esto ocurrió tan solo cuatro años después que el estadounidense Thomas Alba Edison, logrará generar luz gracias a la electricidad. Las cinco bombillas iluminaban lo mismo que 32 velas.</p>
+                      </div>
+                      <div class="modal-footer no-border" >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+      
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    
+    <script src="https://pchen66.github.io/js/three/three.min.js"></script>
+    <script src="https://pchen66.github.io/js/panolens/panolens.min.js"></script>
+    <script src="js/el.js"></script>
+    <script src="js/mouse.js"></script>
+    <script src="js/modales.js"></script>
+    <script src="js/panopba.js"></script>
+
+
+  </body>
+</html>
