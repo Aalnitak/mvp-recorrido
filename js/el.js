@@ -27,12 +27,12 @@ let logocolor = true;
 
 function cambioLogo(){
     if(logocolor && dia){
-        logo.src ="../img/logo-blanco.png";
+        logo.src ="img/logo-blanco.png";
         logocolor = false;
     }
     else if (!logocolor && dia){
         setTimeout(()=> {
-            logo.src ="../img/logo-color.png";
+            logo.src ="img/logo-color.png";
             logocolor = true;
             
         }, 400);
@@ -52,11 +52,11 @@ function unMutePage() {
 function fondoplay(){
     if(audiofondo.paused){
         audiofondo.play();
-        iconaudio.src = "altavoz.svg";
+        iconaudio.src = "svg/altavoz.svg";
         unMutePage();
     }else{
         audiofondo.pause();
-        iconaudio.src = "mudo.svg";  
+        iconaudio.src = "svg/mudo.svg";  
         mutePage();
     }
 }
@@ -67,10 +67,10 @@ function diaNoche(){
         fotoNoche.style.opacity="1";
         fotoNoche.style.animation = "fadeEffect 2s";
         setTimeout(() => { 
-            dyn.src = "moon.svg";
-            logo.src ="../img/logo-blanco.png";
+            dyn.src = "svg/moon.svg";
+            logo.src ="img/logo-blanco.png";
             head.style = "background-color:black;";
-            logo100.src ="logo100-noche.svg"; 
+            logo100.src ="svg/logo100-noche.svg"; 
             botonNav.style.filter =  "invert(90%)";
         }, 600);
         
@@ -89,10 +89,10 @@ function diaNoche(){
         fotoDia.style.animation = "fadeEffect 2s";
         fotoNoche.style.animation = "fadeOut 2s";
         setTimeout(() => { 
-            dyn.src = "sun.svg";
-            logo.src ="../img/logo-color.png";
+            dyn.src = "svg/sun.svg";
+            logo.src ="img/logo-color.png";
             head.style = "";
-            logo100.src ="logo-100.svg"; 
+            logo100.src ="svg/logo-100.svg"; 
             botonNav.style.filter =  "";
         }, 700);
         
